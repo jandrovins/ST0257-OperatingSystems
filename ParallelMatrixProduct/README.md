@@ -1,6 +1,6 @@
 # Modo de uso
 
-## Para compilación usar el siguiente comando:
+## Para compilación usar el siguiente comando:
 
   gcc matrixMultiplication.c -pthreads -o matrixMultiplication.o
 
