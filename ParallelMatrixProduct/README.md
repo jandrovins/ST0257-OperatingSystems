@@ -7,9 +7,11 @@
 
 ## Para compilación usar el siguiente comando:
 
-  gcc matrixMultiplication.c -pthreads -o matrixMultiplication.o
+  gcc -O2 -pthread matrixMultiplication.c -o matrixMultiplication
+  
+  o puede usarse el makefile dado
 
-## Para correrlo se requiere un archivo de prueba con el siguiente formato, un ejemplo de este se encuentra más abajo.
+## Para correrlo se requiere un archivo de prueba con el siguiente formato, un ejemplo de este se encuentra más abajo y dos ejemplos adicionales se encuentran en el repositorio, estos son t1 y t2.
 
 FilasA ColumnasA
 [A11 A12 A13 … A1n]
@@ -53,6 +55,12 @@ FilasB ColumnasB
 2 3 4 5
 
 
-Para correr el código con el caso de prueba dado en sistemas unix usar:
+## Para correr el código con el caso de prueba dado en sistemas unix usar:
 
 	./matrixMultiplication.o < archivoDePrueba
+	
+## Make tests
+
+Este es un script básico de python que puede correr pruebas sobre el programa propuesto con matrices de tamaño y valores aleatorios. Se puede correr usando:
+
+	python make-tests.py
