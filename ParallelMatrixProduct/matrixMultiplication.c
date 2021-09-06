@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 /*******************************/
 /* BEGIN OF STRUCTS DEFINITION */
@@ -83,7 +84,7 @@ int main()
 void* threadMult(void* direction)
 {
     RxC* RowXCol = direction;
-    double register val;
+    register double val = 0 ;
     for (int i = 0; i < A.cols; i++) {
         val += A.data[RowXCol->A_row][i] * B.data[i][RowXCol->B_col];
     }
