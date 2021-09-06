@@ -1,3 +1,8 @@
+# Threaded Matrix Multiplication
+
+Vincent Alejandro Arcila
+Isabel Piedrahita Velez
+
 # Modo de uso
 
 ## Para compilación usar el siguiente comando:
