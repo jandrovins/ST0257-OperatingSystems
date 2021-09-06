@@ -9,12 +9,12 @@ import os
 
 np.set_printoptions(threshold=sys.maxsize)
 
-numTests = 1000
+numTests = 30
 successTests = 0 
 for i in range(numTests):
-    N = random.randint(100, 110)
-    M = random.randint(100, 110)
-    K = random.randint(100, 110)
+    N = random.randint(100, 100)
+    M = random.randint(100, 100)
+    K = random.randint(100, 100)
     
     A = np.random.rand(N, M)
     B = np.random.rand(M, K)
@@ -34,6 +34,8 @@ for i in range(numTests):
     #print(A)
     #print(B)
     #print(buffer)
+    with open("LastTest", "w") as lastTest:
+        lastTest.write(buffer)
 
     child = sp.run(["./matrixMultiplication"], input=buffer, shell=True, text=True, capture_output=True, check=True)
 
