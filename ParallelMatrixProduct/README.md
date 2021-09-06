@@ -1,7 +1,7 @@
 # Threaded Matrix Multiplication
 
-Vincent Alejandro Arcila
-Isabel Piedrahita Velez
+- Vincent Alejandro Arcila
+- Isabel Piedrahita Velez
 
 # Modo de uso
 
