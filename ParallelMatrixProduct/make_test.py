@@ -35,7 +35,7 @@ for i in range(numTests):
     #print(B)
     #print(buffer)
 
-    child = sp.run(["./parameters"], input=buffer, shell=True, text=True, capture_output=True, check=True)
+    child = sp.run(["./matrixMultiplication"], input=buffer, shell=True, text=True, capture_output=True, check=True)
 
     OurMatMult = [float(i) for i in child.stdout.split()]
     OurMatMult = np.reshape(np.array(OurMatMult), (N,K))
