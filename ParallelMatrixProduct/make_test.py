@@ -9,10 +9,12 @@ import os
 
 np.set_printoptions(threshold=sys.maxsize)
 
-for i in range(100):
-    N = random.randint(2, 5)
-    M = random.randint(2, 5)
-    K = random.randint(2, 5)
+numTests = 1000
+successTests = 0 
+for i in range(numTests):
+    N = random.randint(100, 110)
+    M = random.randint(100, 110)
+    K = random.randint(100, 110)
     
     A = np.random.rand(N, M)
     B = np.random.rand(M, K)
@@ -29,9 +31,9 @@ for i in range(100):
             buffer += f"{num} "
     buffer+="\n"
 
-    print(A)
-    print(B)
-    print(buffer)
+    #print(A)
+    #print(B)
+    #print(buffer)
 
     child = sp.run(["./parameters"], input=buffer, shell=True, text=True, capture_output=True, check=True)
 
@@ -40,7 +42,11 @@ for i in range(100):
 
     if np.allclose(OurMatMult, result):
         print(f"SUCCESS ON TEST {i}")
+        successTests +=1
     else:
         print(f"ERROR ON TEST {i}:")
-        #print(buffer, end="\n\n")
-        #print(child.stdout, end="\n\n")
+
+print("###########################################")
+print(f"TESTS SUCCEDED: {successTests}")
+print(f"TESTS FAILED: {numTests-successTests}")
+print("###########################################")
