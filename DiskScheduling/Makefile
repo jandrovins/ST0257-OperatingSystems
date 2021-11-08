@@ -1,5 +1,5 @@
 CC=g++
-CXXFLAGS=-Wall
+CXXFLAGS=-Wall -g
 .SUFFIXES = .cpp
 objs:=$(wildcard *.cpp)
 targets:=$(objs:.cpp= )
